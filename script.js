@@ -161,6 +161,102 @@
 // checkEvenOdd(7);
 
 
+// 16. Accept Name and Age to Check Voter Eligibility
+
+// function checkVoterEligibility(name, age) {
+//     if (age >= 18) {
+//         console.log(`Hello ${name}, You are a valid voter.`);
+//     } else {
+//         console.log(`Sorry ${name}, you can't cast the vote.`);
+//         console.log(`You will be eligible to vote in ${18 - age} years.`);
+//     }
+// }
+
+// // Example: name = 'Shery', age = 17
+// checkVoterEligibility('Shery', 17);
+
+
+//17. Accept Day Number (1-7) and Print Corresponding Day Name
+
+// function getDayName(daysNumber){
+//     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"];
+//     if(daysNumber>=1 && daysNumber<=7){
+//         console.log(`Day is ${days[daysNumber- 1]} `)
+//     }
+//     else{
+//         console.log("Inavlid Day")
+//     }
+// }
+// // Example: dayNumber = 3
+// getDayName(3);
+
+
+// 18. Accept Three Numbers and Print the Greatest Among Them
+// function findGreatestAmongThree(a, b, c) {
+//     if (a > b && a > c) {
+//         console.log(`${a} is the greatest`);
+//     } else if (b > a && b > c) {
+//         console.log(`${b} is the greatest`);
+//     } else {
+//         console.log(`${c} is the greatest`);
+//     }
+// }
+
+// // Example: a = 3, b = 7, c = 5
+// findGreatestAmongThree(3, 7, 5);
+
+
+//19. Check if a Year is a Leap Year
+
+// function checkLeapYear(year) {
+//     if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+//         console.log(`${year} is a leap year`);
+//     } else {
+//         console.log(`${year} is not a leap year`);
+//     }
+// }
+
+// // Example: year = 2024
+// checkLeapYear(2024);
+
+
+// 20. Shop Discount Logic
+// function calculateDiscount(billAmount) {
+//     let discount;
+    
+//     if (billAmount >= 500) {
+//         discount = billAmount * 0.1; // 10% discount
+//     } else if (billAmount >= 200) {
+//         discount = billAmount * 0.05; // 5% discount
+//     } else {
+//         discount = 0; // No discount
+//     }
+    
+//     console.log(`Discount: ${discount}`);
+//     console.log(`Total after discount: ${billAmount - discount}`);
+// }
+
+// // Example: billAmount = 600
+// calculateDiscount(600);
+
+// 21. Bijli Bill Calculation
+
+// function calculateBijliBill(units) {
+//     let cost;
+//     if (units <= 100) {
+//         cost = units * 1.5;
+//     } else if (units <= 200) {
+//         cost = 100 * 1.5 + (units - 100) * 2.5;
+//     } else {
+//         cost = 100 * 1.5 + 100 * 2.5 + (units - 200) * 3.5;
+//     }
+
+//     console.log(`Total Bijli Bill: ₹${cost}`);
+// }
+
+// // Example: units = 250
+// calculateBijliBill(250);
+
 
 
 
