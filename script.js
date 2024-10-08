@@ -333,6 +333,97 @@
 // // Example: num = 5
 // factorial(5);
 
+// 29. Sum of All Even & Odd Numbers in a Range Separately
+// function sumEvenOddInRange(n) {
+//     let sumEven = 0, sumOdd = 0;
+//     for (let i = 1; i <= n; i++) {
+//         if (i % 2 === 0) {
+//             sumEven += i;
+//         } else {
+//             sumOdd += i;
+//         }
+//     }
+//     console.log(`Sum of Even numbers: ${sumEven}`);
+//     console.log(`Sum of Odd numbers: ${sumOdd}`);
+// }
+
+// // Example: n = 10
+// sumEvenOddInRange(10);
+
+//30 Print All Factors of a Number
+// function printFactors(num) {
+//     for (let i = 1; i <= num; i++) {
+//         if (num % i === 0) {
+//             console.log(i);
+//         }
+//     }
+// }
+
+// // Example: num = 12
+// printFactors(50);
+
+// 31. Sum of All Factors of a Number
+// function printFactors(num) {
+//     let sum = 0;
+//     for (let i = 1; i <= num; i++) {
+//         if (num % i === 0) {
+//             sum+=i
+//         }
+//     }
+//     console.log("sum:",sum)
+// }
+
+// // Example: num = 12
+// printFactors(10);
+
+//32. Check if the Number is Prime
+// function isPrime(num) {
+//     if (num <= 1) return false;
+//     for (let i = 2; i <= Math.sqrt(num); i++) {
+//         if (num % i === 0) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// // Example: num = 29
+// console.log(isPrime(29) ? `${29} is a prime number` : `${29} is not a prime number`);
+
+//33. Find a Raised to the Power of b
+
+// let a =2;
+// let b = 5
+// let power = Math.pow(a,b)
+// console.log(`1${a}^${b} is ${power}`)
+
+
+//34. Separate Each Digit of a Number
+
+// function separateDigits(num) {
+//     let digits = num.toString().split('').reverse();
+//     digits.forEach(digit => console.log(digit));
+// }
+
+// // Example: num = 123
+// separateDigits(123);
+
+
+// 35. Sum of Digits of a Number
+
+// function sumOfDigits(num){
+//     let sum = 0;
+//     while(num>0){
+//         sum +=num%10;
+//         num = Math.floor(num/10);
+
+//     }
+//     console.log(`Sum of digits is ${sum}`)
+// }
+
+// // Example: num = 936
+// sumOfDigits(936);
+
 
 
 
