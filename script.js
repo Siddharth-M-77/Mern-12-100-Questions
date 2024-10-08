@@ -74,7 +74,7 @@
 
 
 
-// Accept the three sides of triangle and calculate the area using herons 
+//9- Accept the three sides of triangle and calculate the area using herons 
 
 // function calculateTriangleArea(a, b, c) {
 //     // Semi-perimeter (s) = (a + b + c) / 2
@@ -88,6 +88,78 @@
 
 // // Example: sides a = 3, b = 4, c = 5
 // calculateTriangleArea(3, 4, 5);
+
+// 10. Find surface area of sphere
+
+// function calculateSphereSurfaceArea(radius) {
+//     // Surface area of a sphere: A = 4πr²
+//     let surfaceArea = 4 * Math.PI * Math.pow(radius, 2);
+    
+//     console.log(`Surface Area of the sphere: ${surfaceArea.toFixed(2)}`);
+// }
+
+// // Example: radius = 7
+// calculateSphereSurfaceArea(7);
+
+
+//11 Find circumference and area of circle
+// function calculateCircleProperties(radius) {
+//     // Circumference of a circle: C = 2πr
+//     let circumference = 2 * Math.PI * radius;
+    
+//     // Area of a circle: A = πr²
+//     let area = Math.PI * Math.pow(radius, 2);
+    
+//     console.log(`Circumference of the circle: ${circumference.toFixed(2)}`);
+//     console.log(`Area of the circle: ${area.toFixed(2)}`);
+// }
+
+// // Example: radius = 5
+// calculateCircleProperties(5);
+
+// 12. Accept Two Numbers and Print the Greatest
+
+// function printGreatest(a, b) {
+//     if (a > b) {
+//         console.log(`${a} is greater`);
+//     } else if (b > a) {
+//         console.log(`${b} is greater`);
+//     } else {
+//         console.log(`Both numbers are equal`);
+//     }
+// }
+
+// // Example: a = 5, b = 8
+// printGreatest(5, 8);
+
+// 13. Accept Gender and Print Greeting Message
+
+// function greetUserByGender(gender) {
+//     if (gender === 'M' || gender === 'm') {
+//         console.log("Good Morning Sir");
+//     } else if (gender === 'F' || gender === 'f') {
+//         console.log("Good Morning Ma'am");
+//     } else {
+//         console.log("Wrong Input");
+//     }
+// }
+
+// // Example: gender = 'M'
+// greetUserByGender('M');
+
+// 15. Accept Integer and Check if Even or Odd
+
+// function checkEvenOdd(number) {
+//     if (number % 2 === 0) {
+//         console.log(`${number} is an even number`);
+//     } else {
+//         console.log(`${number} is an odd number`);
+//     }
+// }
+
+// // Example: number = 7
+// checkEvenOdd(7);
+
 
 
 
