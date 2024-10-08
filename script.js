@@ -257,6 +257,81 @@
 // // Example: units = 250
 // calculateBijliBill(250);
 
+//22. Check if an Alphabet is a Consonant or a Vowel
+// function checkVowelOrConsonant(letter) {
+//     letter = letter.toLowerCase();
+    
+//     if (['a', 'e', 'i', 'o', 'u'].includes(letter)) {
+//         console.log(`${letter} is a vowel`);
+//     } else if (/[a-z]/.test(letter)) {
+//         console.log(`${letter} is a consonant`);
+//     } else {
+//         console.log("Invalid input");
+//     }
+// }
+
+// // Example: letter = 'A'
+// checkVowelOrConsonant('A');
+
+//23. Print "Hello World" N Times
+// function printHelloWorld(n) {
+//     for (let i = 0; i < n; i++) {
+//         console.log("Hello World");
+//     }
+// }
+
+// // Example: n = 5
+// printHelloWorld(2);
+
+//24. Print Natural Numbers up to N
+
+// function printNaturalNumbers(n) {
+//     for (let i = 1; i <= n; i++) {
+//         console.log(i);
+//     }
+// }
+
+// // Example: n = 10
+// printNaturalNumbers(10);
+
+//25. Reverse For Loop - Print N to 1
+// function printReverse(n){
+//     for(let i = n; i>=1; i--){
+//         console.log(i)
+//     }
+// }
+// printReverse(5);
+
+//26. Print Multiplication Table up to 10 Terms
+// function Multiplication(num){
+//     for(i = 1; i<=10; i++){
+
+//         console.log(`${num} * ${i} = ${num*i}`)
+//     }
+// }
+// Multiplication(2)
+
+//27. Sum up to N Terms
+// function sumUpToN(n){
+//     let sum =0;
+//     for(i=1; i<=n; i++){
+//         sum+=i
+//     }
+// console.log(`Sum up to ${n} is ${sum}`);
+// }
+// sumUpToN(10)
+
+//28. Factorial of a Number
+// function factorial(num) {
+//     let fact = 1;
+//     for(i=1; i<=num; i++){
+//         fact*=i
+//     }
+//     console.log(`Factorial of ${num} is ${fact}`);
+// }
+
+// // Example: num = 5
+// factorial(5);
 
 
 
