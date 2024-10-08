@@ -316,18 +316,30 @@
 
 //2.  Find the freqency of elements in an integer array
 
-let intArr = [1, 2, 3, 4, 5, 6, 7, 8,6,5,4,32,1,];
-function freqencyOfNumber(intArr) {
-  let freqency = {};
-  for (let num of intArr) {
-    if (freqency[num]) {
-      freqency[num]++;
-    } else {
-      freqency[num] = 1;
-    }
-  }
-  for (let num in freqency) {
-    console.log(`this ${num} is ${freqency[num]} times`);
-  }
-}
-freqencyOfNumber(intArr)
+// let intArr = [1, 2, 3, 4, 5, 6, 7, 8,6,5,4,32,1,];
+// function freqencyOfNumber(intArr) {
+//   let freqency = {};
+//   for (let num of intArr) {
+//     if (freqency[num]) {
+//       freqency[num]++;
+//     } else {
+//       freqency[num] = 1;
+//     }
+//   }
+//   for (let num in freqency) {
+//     console.log(`this ${num} is ${freqency[num]} times`);
+//   }
+// }
+// freqencyOfNumber(intArr)
+
+// function numJewelsInStones(J, S) {
+//   let jweller = new Set(J);
+//   let count = 0;
+//   for (let stone of S) {
+//     if (jweller.has(stone)) count++;
+//   }
+//   return count;
+// }
+// let J = "aA"; // Jewels
+// let S = "aAAbbbb"; // Stones
+// console.log(numJewelsInStones(J, S));
