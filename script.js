@@ -72,17 +72,15 @@
 // // Example: P = 10000, R = 5%, T = 2 years, compounded quarterly (n = 4)
 // calculateCompoundInterest(10000, 5, 2, 4);
 
-
-
-//9- Accept the three sides of triangle and calculate the area using herons 
+//9- Accept the three sides of triangle and calculate the area using herons
 
 // function calculateTriangleArea(a, b, c) {
 //     // Semi-perimeter (s) = (a + b + c) / 2
 //     let s = (a + b + c) / 2;
-    
+
 //     // Use Heron's formula: area = √[s(s - a)(s - b)(s - c)]
 //     let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
-    
+
 //     console.log(`Area of the triangle: ${area.toFixed(2)}`);
 // }
 
@@ -94,22 +92,21 @@
 // function calculateSphereSurfaceArea(radius) {
 //     // Surface area of a sphere: A = 4πr²
 //     let surfaceArea = 4 * Math.PI * Math.pow(radius, 2);
-    
+
 //     console.log(`Surface Area of the sphere: ${surfaceArea.toFixed(2)}`);
 // }
 
 // // Example: radius = 7
 // calculateSphereSurfaceArea(7);
 
-
 //11 Find circumference and area of circle
 // function calculateCircleProperties(radius) {
 //     // Circumference of a circle: C = 2πr
 //     let circumference = 2 * Math.PI * radius;
-    
+
 //     // Area of a circle: A = πr²
 //     let area = Math.PI * Math.pow(radius, 2);
-    
+
 //     console.log(`Circumference of the circle: ${circumference.toFixed(2)}`);
 //     console.log(`Area of the circle: ${area.toFixed(2)}`);
 // }
@@ -160,7 +157,6 @@
 // // Example: number = 7
 // checkEvenOdd(7);
 
-
 // 16. Accept Name and Age to Check Voter Eligibility
 
 // function checkVoterEligibility(name, age) {
@@ -174,7 +170,6 @@
 
 // // Example: name = 'Shery', age = 17
 // checkVoterEligibility('Shery', 17);
-
 
 //17. Accept Day Number (1-7) and Print Corresponding Day Name
 
@@ -190,7 +185,6 @@
 // // Example: dayNumber = 3
 // getDayName(3);
 
-
 // 18. Accept Three Numbers and Print the Greatest Among Them
 // function findGreatestAmongThree(a, b, c) {
 //     if (a > b && a > c) {
@@ -205,7 +199,6 @@
 // // Example: a = 3, b = 7, c = 5
 // findGreatestAmongThree(3, 7, 5);
 
-
 //19. Check if a Year is a Leap Year
 
 // function checkLeapYear(year) {
@@ -219,11 +212,10 @@
 // // Example: year = 2024
 // checkLeapYear(2024);
 
-
 // 20. Shop Discount Logic
 // function calculateDiscount(billAmount) {
 //     let discount;
-    
+
 //     if (billAmount >= 500) {
 //         discount = billAmount * 0.1; // 10% discount
 //     } else if (billAmount >= 200) {
@@ -231,7 +223,7 @@
 //     } else {
 //         discount = 0; // No discount
 //     }
-    
+
 //     console.log(`Discount: ${discount}`);
 //     console.log(`Total after discount: ${billAmount - discount}`);
 // }
@@ -260,7 +252,7 @@
 //22. Check if an Alphabet is a Consonant or a Vowel
 // function checkVowelOrConsonant(letter) {
 //     letter = letter.toLowerCase();
-    
+
 //     if (['a', 'e', 'i', 'o', 'u'].includes(letter)) {
 //         console.log(`${letter} is a vowel`);
 //     } else if (/[a-z]/.test(letter)) {
@@ -397,7 +389,6 @@
 // let power = Math.pow(a,b)
 // console.log(`1${a}^${b} is ${power}`)
 
-
 //34. Separate Each Digit of a Number
 
 // function separateDigits(num) {
@@ -407,7 +398,6 @@
 
 // // Example: num = 123
 // separateDigits(123);
-
 
 // 35. Sum of Digits of a Number
 
@@ -424,19 +414,98 @@
 // // Example: num = 936
 // sumOfDigits(936);
 
+//36. Print the Reverse of a Number
+// function reverseNumber(num) {
+//   let arr = num.toString().split("").slice().reverse();
+//   for (let n of arr) {
+//     console.log(n);
+
+//   }
+//   z;
+// }
+// reverseNumber(234);
+
+//37. Check if Number is Palindrome
+
+// function isPalindrome(num) {
+//   let reversedNum = Number(num.toString().split("").slice().reverse().join(""));
+//   console.log(reversedNum);
+//   if (num === reversedNum) {
+//     console.log(`${num} is Palindrome`);
+//   } else {
+//     console.log(`${num} is not Palindrome`);
+//   }
+// }
+// isPalindrome(121);
+
+//38. Check if the Number is Strong Number (Sum of Factorials of Each Digit)
+
+// function factorial(n) {
+//     if (n === 0 || n === 1) return 1;
+//     return n * factorial(n - 1);
+// }
+
+// function isStrongNumber(num) {
+//     let sum = 0;
+//     let temp = num;
+//     while (temp > 0) {
+//         sum += factorial(temp % 10);
+//         temp = Math.floor(temp / 10);
+//     }
+//     console.log(sum === num ? `${num} is a strong number` : `${num} is not a strong number`);
+// }
+
+// // Example: num = 145
+// isStrongNumber(145);
 
 
+//39. Check if the Number is Automorphic
 
+//automorphic=> Automorphic number wo number hota hai jo apne square ke last digits ke equal hota hai
 
+// function automorphic(num){
+//     square = num * num;
+//     strnum = num.toString();
+//     strSquare = square.toString()
+//     console.log(strSquare.endsWith(strnum)?`${num} is Automorphic`:`${num} is not Automorphic`)
+// }
+// automorphic(5)
 
+// 40. Print hello until user gives wrong input using do-while
+// let input;
+// do {
+//   input = prompt("Enter 'hello' to continue or anything else to stop: ");
+//   console.log("Hello!");
+// } while (input !== "hello");
+// console.log("You entered a wrong input, exiting...");
 
+//41. Make a choice-based calculator using do-while
+// let choice;
+// do {
+//   const num1 = +prompt("Enter first number: ");
+//   const num2 = +prompt("Enter second number: ");
+//   choice = prompt("Enter operation (+, -, *, /) or 'exit' to quit: ");
 
-
-
-
-
-
-
+//   switch (choice) {
+//     case "+":
+//       console.log(`Result: ${num1 + num2}`);
+//       break;
+//     case "-":
+//       console.log(`Result: ${num1 - num2}`);
+//       break;
+//     case "*":
+//       console.log(`Result: ${num1 * num2}`);
+//       break;
+//     case "/":
+//       console.log(`Result: ${num1 / num2}`);
+//       break;
+//     case "exit":
+//       console.log("Exiting calculator...");
+//       break;
+//     default:
+//       console.log("Invalid operation!");
+//   }
+// } while (choice !== "exit");
 
 
 
