@@ -256,7 +256,7 @@
 // console.log(ans);
 
 //10. 2114. Maximum Number of Words Found in Sentence
-// let num = "1234"; //if u give string then no need to convert it to string otherwise u give number then convert it into string 
+// let num = "1234"; //if u give string then no need to convert it to string otherwise u give number then convert it into string
 // let maxNum = Math.max(...num.split("").map(Number)); //.map(Number) convert each elemnt in Number
 // console.log(maxNum);
 
@@ -313,3 +313,21 @@
 // let array = [1, 2, 3, 4, 2, 3, 5, 1, 6];
 // let unique = [...new Set(array)];
 // console.log(unique);
+
+//2.  Find the freqency of elements in an integer array
+
+let intArr = [1, 2, 3, 4, 5, 6, 7, 8,6,5,4,32,1,];
+function freqencyOfNumber(intArr) {
+  let freqency = {};
+  for (let num of intArr) {
+    if (freqency[num]) {
+      freqency[num]++;
+    } else {
+      freqency[num] = 1;
+    }
+  }
+  for (let num in freqency) {
+    console.log(`this ${num} is ${freqency[num]} times`);
+  }
+}
+freqencyOfNumber(intArr)
