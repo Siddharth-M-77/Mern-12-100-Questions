@@ -54,6 +54,90 @@
 // console.log(`Area of rectangle is ${c}`)
 // console.log(`Perimeter of a rectangle is ${d}`)
 
+//Q-8=>Accept the parameters and calculate the Compound Interest & print it
+// on STDOUT (Use Math class methods)
+
+// function calculateCompoundInterest(principal, rate, time, n) {
+//     rate = rate / 100;
+
+//     // Use the compound interest formula: A = P(1 + r/n)^(nt)
+//     let amount = principal * Math.pow((1 + rate / n), (n * time));
+
+//     // Calculate the compound interest
+//     let compoundInterest = amount - principal;
+
+//     console.log(`Compound Interest: ${compoundInterest.toFixed(2)}`);
+// }
+
+// // Example: P = 10000, R = 5%, T = 2 years, compounded quarterly (n = 4)
+// calculateCompoundInterest(10000, 5, 2, 4);
+
+
+
+// Accept the three sides of triangle and calculate the area using herons 
+
+// function calculateTriangleArea(a, b, c) {
+//     // Semi-perimeter (s) = (a + b + c) / 2
+//     let s = (a + b + c) / 2;
+    
+//     // Use Heron's formula: area = √[s(s - a)(s - b)(s - c)]
+//     let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    
+//     console.log(`Area of the triangle: ${area.toFixed(2)}`);
+// }
+
+// // Example: sides a = 3, b = 4, c = 5
+// calculateTriangleArea(3, 4, 5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Recursion Questions  ❓❓❓❓❓❓❓❓
 
 // Accept a decimal number and convert it into binary equivalent. ✅✅✅
@@ -127,7 +211,7 @@
 // console.log("Student Details:");
 // students.forEach((student) => student.displayInfo());
 
-//STRING Day 33 to 37
+//STRING Day 33 to 37✅✅✅✅✅
 //1  Accept a string from user and print its each character on a new line
 // let str = "Sidd";
 
