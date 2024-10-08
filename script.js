@@ -256,8 +256,8 @@
 // console.log(ans);
 
 //10. 2114. Maximum Number of Words Found in Sentence
-// let num = 1234;
-// let maxNum = Math.max(...num.toString().split("").map(Number)); //.map(Number) convert each elemnt in Number
+// let num = "1234"; //if u give string then no need to convert it to string otherwise u give number then convert it into string 
+// let maxNum = Math.max(...num.split("").map(Number)); //.map(Number) convert each elemnt in Number
 // console.log(maxNum);
 
 //11.Accept a string and print the frequency of each character present in the string
@@ -290,15 +290,26 @@
 // let str2 = "car";
 // function areAnagrams(str1, str2) {
 //   if (str1.length !== str2.length) return false;
-//   str1 = str1.toLowerCase().split("").sort().join("")
-//   str2 = str2.toLowerCase().split("").sort().join("")
+//   str1 = str1.toLowerCase().split("").sort().join("");
+//   str2 = str2.toLowerCase().split("").sort().join("");
 
-//   return str1 === str2
+//   return str1 === str2;
 // }
-// areAnagrams(str1,str2)
-// if(areAnagrams(str1,str2)){
-//     console.log("This is Areanagrams")
+// areAnagrams(str1, str2);
+// if (areAnagrams(str1, str2)) {
+//   console.log(`${str1} and ${str2} are anagrams.`);
+// } else {
+//   console.log(`${str1} and ${str2} are not anagrams.`);
 // }
-// else{
-//     console.log("not a areAnagrams")
-// }
+
+//sort the words of an sentence
+// let sentence = "hello bhai kaisa hai tu kal aa party deta hu";
+// let sorted = sentence.split(" ").sort().join(" ")
+// console.log(sorted)
+
+// Hasing day 40 ✅✅✅✅✅✅
+
+//1. - Print the unique elements in an array
+// let array = [1, 2, 3, 4, 2, 3, 5, 1, 6];
+// let unique = [...new Set(array)];
+// console.log(unique);
