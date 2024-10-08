@@ -343,3 +343,16 @@
 // let J = "aA"; // Jewels
 // let S = "aAAbbbb"; // Stones
 // console.log(numJewelsInStones(J, S));
+
+//. Check if the Sentence Is Pangram
+//Pangram=>. Pangram ka matlab hota hai ek aisi sentence jisme English alphabet ke sabhi 26 letters kam se kam ek baar use huye hoon.
+
+// let sentence = "thequickbrwnfxjumpsvertheloazydg";
+// function Pangram(sentence) {
+//   let unique = new Set();
+//   for (let char of sentence) {
+//     unique.add(char);
+//   }
+//   return unique.size === 26;
+// }
+// console.log(Pangram(sentence));
