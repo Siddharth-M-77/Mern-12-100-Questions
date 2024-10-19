@@ -370,6 +370,7 @@
 
 //32. Check if the Number is Prime
 // function isPrime(num) {
+
 //     if (num <= 1) return false;
 //     for (let i = 2; i <= Math.sqrt(num); i++) {
 //         if (num % i === 0) {
@@ -458,7 +459,6 @@
 // // Example: num = 145
 // isStrongNumber(145);
 
-
 //39. Check if the Number is Automorphic
 
 //automorphic=> Automorphic number wo number hota hai jo apne square ke last digits ke equal hota hai
@@ -482,63 +482,559 @@
 //41. Make a choice-based calculator using do-while
 // let choice;
 // do {
-//   const num1 = +prompt("Enter first number: ");
-//   const num2 = +prompt("Enter second number: ");
-//   choice = prompt("Enter operation (+, -, *, /) or 'exit' to quit: ");
+//     const num1 = +prompt("Enter first number: ");
+//     const num2 = +prompt("Enter second number: ");
+//     choice = prompt("Enter operation (+, -, *, /) or 'exit' to quit: ");
 
-//   switch (choice) {
-//     case "+":
-//       console.log(`Result: ${num1 + num2}`);
-//       break;
-//     case "-":
-//       console.log(`Result: ${num1 - num2}`);
-//       break;
-//     case "*":
-//       console.log(`Result: ${num1 * num2}`);
-//       break;
-//     case "/":
-//       console.log(`Result: ${num1 / num2}`);
-//       break;
-//     case "exit":
-//       console.log("Exiting calculator...");
-//       break;
-//     default:
-//       console.log("Invalid operation!");
-//   }
+//     switch (choice) {
+//         case "+":
+//             console.log(`Result: ${num1 + num2}`);
+//             break;
+//         case "-":
+//             console.log(`Result: ${num1 - num2}`);
+//             break;
+//         case "*":
+//             console.log(`Result: ${num1 * num2}`);
+//             break;
+//         case "/":
+//             if (num2 !== 0) {
+//                 console.log(`Result: ${num1 / num2}`);
+//             } else {
+//                 console.log("Error: Division by zero is not allowed.");
+//             }
+//             break;
+//         case "exit":
+//             console.log("Exiting calculator...");
+//             break;
+//         default:
+//             console.log("Invalid operation!");
+//     }
 // } while (choice !== "exit");
 
+//42- Print Weekday using Switch
+
+// let num = +prompt("Enter number");
+// switch (num) {
+//   case 1: {
+//     console.log("Today is Sunday");
+//     break;
+//   }
+//   case 2: {
+//     console.log("Today is Monday");
+//     break;
+//   }
+//   case 3: {
+//     console.log("Today is Tuesday");
+//     break;
+//   }
+//   case 4: {
+//     console.log("Today is Wednessday");
+//     break;
+//   }
+//   case 5: {
+//     console.log("Today is Thrusday");
+//     break;
+//   }
+//   case 6: {
+//     console.log("Today is Friday");
+//     break;
+//   }
+//   case 7: {
+//     console.log("Today is Saturday");
+//     break;
+//   }
+//   default: {
+//     console.log("Invalid day");
+//     break;
+//   }
+// }
+
+//- Accept an english alphabet from user and check if it is a consonent or
+// a vowel;
+
+// let alphabet = prompt("Enter your alphabet")
+// switch(alphabet){
+//     case "a":{
+//         console.log("This is vowels");
+//         break;
+//     }
+//     case "e":{
+//         console.log("This is vowels");
+//         break;
+//     }
+//     case "i":{
+//         console.log("This is vowels");
+//         break;
+//     }
+//     case "o":{
+//         console.log("This is vowels");
+//         break;
+//     }
+//     case "u":{
+//         console.log("This is vowels");
+//         break;
+//     }
+//     default:{
+//         console.log("This is consonents")
+//     }
+
+// }
+
+//- Project - Guess Game
+//  Write a program that generates a random number and asks the
+// user to guess what the number is.
+// If the user's guess is higher than the random number, the program
+// should display "Too high, try again."
+// If the user's guess is lower than the random number, the program
+// should display "Too low, try again."
+//The program should use a loop that repeats until the user correctly
+// guesses the random number
+
+// function guessGame() {
+//   // Generate a random number between 1 and 100
+//   const randomNumber = Math.floor(Math.random() * 10);
+//   console.log(randomNumber)
+//   let userGuess = 0;
+
+//   // Keep looping until the user guesses correctly
+//   while (userGuess !== randomNumber) {
+//     // Get user input
+//     userGuess = parseInt(prompt("Guess the number between 1 and 100: "), 10);
+
+//     // Check if the guess is too high, too low, or correct
+//     if (userGuess > randomNumber) {
+//       alert("Too high, try again.");
+//     } else if (userGuess < randomNumber) {
+//       alert("Too low, try again.");
+//     } else {
+//       alert("Congratulations! You guessed the correct number.");
+//     }
+//   }
+// }
+
+// // Start the game
+// guessGame();
+
+//45- Project Restuarent v 1.0  using swicth
+
+// function restaurantMenu() {
+//     let mainChoice = null;
+//     let itemChoice = null;
+
+//     // Loop for the main menu
+//     while (mainChoice !== 3) {
+//       // Display main categories to the user
+//       alert(`
+//         Welcome to Restaurant v1.0
+//         Please choose a category:
+//         1. Main Course
+//         2. Drinks
+//         3. Exit
+//       `);
+
+//       mainChoice = parseInt(prompt("Enter the number of your choice (1-3):"), 10);
+
+//       switch (mainChoice) {
+//         case 1: // Main Course Menu
+//           alert(`
+//             Main Course Menu:
+//             1. Pizza - $10
+//             2. Burger - $7
+//             3. Pasta - $8
+//             4. Go Back to Main Menu
+//           `);
+//           itemChoice = parseInt(prompt("Choose an item from Main Course (1-4):"), 10);
+
+//           switch (itemChoice) {
+//             case 1:
+//               alert("You selected Pizza. Price: $10");
+//               break;
+//             case 2:
+//               alert("You selected Burger. Price: $7");
+//               break;
+//             case 3:
+//               alert("You selected Pasta. Price: $8");
+//               break;
+//             case 4:
+//               alert("Returning to Main Menu...");
+//               break;
+//             default:
+//               alert("Invalid choice. Please choose between 1 and 4.");
+//               break;
+//           }
+//           break;
+
+//         case 2: // Drinks Menu
+//           alert(`
+//             Drinks Menu:
+//             1. Soda - $3
+//             2. Coffee - $4
+//             3. Juice - $5
+//             4. Go Back to Main Menu
+//           `);
+//           itemChoice = parseInt(prompt("Choose an item from Drinks (1-4):"), 10);
+
+//           switch (itemChoice) {
+//             case 1:
+//               alert("You selected Soda. Price: $3");
+//               break;
+//             case 2:
+//               alert("You selected Coffee. Price: $4");
+//               break;
+//             case 3:
+//               alert("You selected Juice. Price: $5");
+//               break;
+//             case 4:
+//               alert("Returning to Main Menu...");
+//               break;
+//             default:
+//               alert("Invalid choice. Please choose between 1 and 4.");
+//               break;
+//           }
+//           break;
+
+//         case 3: // Exit
+//           alert("Thank you for visiting! Exiting the menu.");
+//           break;
+
+//         default:
+//           alert("Invalid choice. Please enter a number between 1 and 3.");
+//           break;
+//       }
+//     }
+//   }
+
+// Start the restaurant menu system
+//   restaurantMenu();
+
+// 46 Right angle Trangle
+//   function rightTriangleStar(rows) {
+//     // Outer loop for the number of rows
+//     for (let i = 1; i <= rows; i++) {
+//       let stars = "";
+
+//       // Inner loop for printing stars in each row
+//       for (let j = 1; j <= i; j++) {
+//         stars += "*";
+//       }
+
+//       // Print the stars for the current row
+//       console.log(stars);
+//     }
+//   }
+
+//   rightTriangleStar(5);
+
+//47 - Right Triangle - Number
+
+// function rightTriangleNumber(rows){
+
+//     for(let i = 1; i<=rows; i++){
+
+//         let pattern = ''
+//         for(let j = 1; j<=i; j++){
+//             pattern+=j +" "
+//         }
+//         console.log(pattern)
+
+//     }
+// }
+// rightTriangleNumber(5)
+
+//48 =>Right Triangle - Alphabet
+
+// function rightTriangleAlphabet(rows) {
+//   // Loop for the number of rows
+//   for (let i = 1; i <= rows; i++) {
+//     let pattern = "";
+//     for (let j = 65; j < 65 + i; j++) {
+//       pattern += String.fromCharCode(j) + " "; // Convert ASCII to character
+//     }
+
+//     console.log(pattern);
+//   }
+// }
+
+// rightTriangleAlphabet(5);
+
+//49 inverted Right Triangle
+
+// function invertedRightTriangleStar(rows) {
+//     for (let i = rows; i >= 1; i--) {
+//       let pattern = '';
+
+//       for (let j = 1; j <= i; j++) {
+//         pattern += '*';
+//       }
+
+//       console.log(pattern);
+//     }
+//   }
+
+//   invertedRightTriangleStar(5);
+
+//50 Mirrored Right Triangle
+
+// function mirroredRightTriangleStar(rows) {
+//   // Outer loop for the number of rows
+//   for (let i = 1; i <= rows; i++) {
+//     let pattern = "";
+
+//     for (let j = 1; j <= rows - i; j++) {
+//       pattern += " "; // Add spaces
+//     }
+
+//     for (let j = 1; j <= i; j++) {
+//       pattern += "*"; // Add stars
+//     }
+
+//     console.log(pattern);
+//   }
+// }
+
+// mirroredRightTriangleStar(5);
+
+//51- Triangle
+// function equilateralTriangleStar(rows) {
+//   for (let i = 1; i <= rows; i++) {
+//     let pattern = "";
+
+//     for (let j = 1; j <= rows - i; j++) {
+//       pattern += " ";
+//     }
+
+//     for (let j = 1; j <= 2 * i - 1; j++) {
+//       pattern += "*"; // Add stars
+//     }
+
+//     console.log(pattern);
+//   }
+// }
+
+// equilateralTriangleStar(5);
+
+// Q-52 vShapeStar :
+
+// function vShapeStar(rows) {
+//   if (rows < 3) {
+//     console.log("Minimum height of the V shape should be 3.");
+//     return;
+//   }
+
+//   for (let i = 0; i < rows; i++) {
+//     let pattern = "";
+
+//     // Left side space
+//     for (let j = 0; j < i; j++) {
+//       pattern += " ";
+//     }
+
+//     // Left star
+//     pattern += "*";
+
+//     // Middle space between two stars
+//     for (let j = 0; j < (2 * (rows - i - 1)) - 1; j++) {
+//       pattern += " ";
+//     }
+
+//     // Right star (only if it's not the last row)
+//     if (i < rows - 1) {
+//       pattern += "*";
+//     }
+
+//     console.log(pattern);
+//   }
+// }
+
+// vShapeStar(5);
+
+//Q-53
+// function xShapeStar(rows) {
+//   // Minimum 3 rows chahiye aur odd number hona chahiye
+//   if (rows < 3 || rows % 2 === 0) {
+//     console.log("X shape ke liye minimum height 3 aur odd number of rows chahiye.");
+//     return;
+//   }
+
+//   for (let i = 0; i < rows; i++) { // Har row ke liye
+//     let pattern = ""; // Row ka pattern shuru karte hain
+
+//     for (let j = 0; j < rows; j++) { // Har column ke liye
+//       // Agar yeh star ka position hai
+//       if (j === i || j === rows - i - 1) {
+//         pattern += "*"; // Star daal do
+//       } else {
+//         pattern += " "; // Baki jagah par space daal do
+//       }
+//     }
+
+//     console.log(pattern); // Pattern ko print karo
+//   }
+// }
+
+// xShapeStar(5); // 5 rows ka X shape print karo
+
+//ARRAY Day 22 to 29
+//54- Accept size n from user and create a n size array then take n inputs
+// into the and finally Print the sum & Avg of all elements
+
+// let arr = [];
+// let n = 5;
+
+// alert("Enter 5 numbers");
+// let sum = 0;
+// for (let i = 0; i < n; i++) {
+//   let num = +prompt("Enter number ", i + 1);
+//   arr.push(num);
+// }
+// arr.map((val) => {
+//   return (sum += val);
+// });
+// let avg = sum / n;
+// console.log(avg);
+
+// console.log(arr);
+
+//55- Find the greatest element  {2, 96, 69, 77, 145, 20} => Max element = >145 found at 4 index
+
+// let element =  [2, 96, 69, 77, 145, 20]
+
+// let maxElement = element[0]
+// let maxIndex = 0;
+
+// for(let i = 0; i<element.length; i++){
+//   if(element[i]>maxElement){
+//     maxElement = element[i]
+//     maxIndex = i
+//   }
+// }
+// console.log(maxElement)
+// console.log(maxIndex)
+
+//56- Find the second greatest element {2, 96, 69, 77, 145, 20} = Second greatest element = 96
+
+//1st way✅✅✅
+// let element = [2, 96, 69, 77, 145, 20];
+
+// let maxElement = Math.max(...element);
+
+// let secondGreatest = Math.max(...element.filter(num => num !== maxElement));
+
+// console.log("Second greatest element:", secondGreatest);
+
+//2nd way✅✅✅
+
+// let arr = [2, 96, 69, 77, 145, 20];
+
+// let maxElement = arr[0];
+// let secondGreatest = -Infinity;
+
+// for (let i = 1; i < arr.length; i++) {
+//   if (arr[i] > maxElement) {
+//     secondGreatest = maxElement;
+//     maxElement = arr[i];
+//   }
+//   else if(arr[i]>secondGreatest && arr[i]!==maxElement){
+//     secondGreatest = arr[i]
+//   }
+// }
+// console.log(secondGreatest)
+
+//57:- Check if array is sorted in increasing order or not.
+
+// let array1 = [2, 5, 10, 15, 20];
+// let array2 = [3, 8, 7, 12, 14];
+
+// function isSorted(arr){
+
+//   for(let i = 0; i<arr.length -1; i++){
+//     if(arr[i]>arr[i + 1]){
+//     return false
+//   }
+
+// }
+// return true
+// }
+// console.log(isSorted(array1))
+// console.log(isSorted(array2))
+
+//58- Take n integer inputs from user and store them in an array.  Now, copy all the elements in an another array but in reverse order
+
+// let arr = [];
+// let reverseArray = [];
+// let userInput;
+// function takeInputAndReverse(n) {
+//   for (let i = 0; i < n; i++) {
+//     userInput = +prompt(`Enter Number ${i + 1}`);
+//     arr.push(userInput);
+//   }
+
+//   //1st way to reverse
+//   // for (let i = arr.length - 1; i >= 0; i--) {
+//   //   reverseArray.push(arr[i]);
+//   // }
+
+//   //2nd way to reverse
+
+//   reverseArray = [...arr].reverse()
+//   console.log(arr);
+//   console.log(reverseArray);
+// }
+
+// takeInputAndReverse(5);
 
 
+//59- Array left Rotation by 1
+
+// function leftRotateByOne(){
+//   let firstElement  = arr.shift()
+//   arr.push(firstElement)
+//   return arr
+
+// }
+
+// let arr = [1, 2, 3, 4, 5];
+// console.log("Original Array:", arr);
+
+// let rotatedArray = leftRotateByOne(arr);
+// console.log("Array after Left Rotation by 1:", rotatedArray);
 
 
+//59- Array right Rotation by 1
+
+// function rightRotateByOne(arr){
+//   let lastElement  = arr.pop()
+//   arr.unshift(lastElement)
+//   return arr
+
+// }
+
+// let arr = [1, 2, 3, 4, 5];
+// console.log("Original Array:", arr);
+
+// let rotatedArray = rightRotateByOne(arr);
+// console.log("Array after Left Rotation by 1:", rotatedArray);
 
 
+//60- Array left rotation by K element
 
+function leftRotateByK(arr, K) {
+  // K ko array ke length ke mod se adjust karenge (extra rotations remove karne ke liye)
+  K = K % arr.length;
 
+  let rotatedPart = arr.splice(0, K); 
 
+  arr.push(...rotatedPart); 
 
+  return arr;
+}
 
+let arr = [1, 2, 3, 4, 5];
+let K = 4;
+console.log("Original Array:", arr);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let rotatedArray = leftRotateByK(arr, K);
+console.log(`Array after Left Rotation by ${K} elements:`, rotatedArray);
 
 
 //Recursion Questions  ❓❓❓❓❓❓❓❓
