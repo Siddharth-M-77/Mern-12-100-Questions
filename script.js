@@ -1018,23 +1018,50 @@
 
 //60- Array left rotation by K element
 
-function leftRotateByK(arr, K) {
-  // K ko array ke length ke mod se adjust karenge (extra rotations remove karne ke liye)
-  K = K % arr.length;
+// function leftRotateByK(arr, K) {
+//   // K ko array ke length ke mod se adjust karenge (extra rotations remove karne ke liye)
+//   K = K % arr.length;
 
-  let rotatedPart = arr.splice(0, K); 
+//   let rotatedPart = arr.splice(0, K); 
 
-  arr.push(...rotatedPart); 
+//   arr.push(...rotatedPart); 
 
-  return arr;
-}
+//   return arr;
+// }
 
-let arr = [1, 2, 3, 4, 5];
-let K = 4;
-console.log("Original Array:", arr);
+// let arr = [1, 2, 3, 4, 5];
+// let K = 4;
+// console.log("Original Array:", arr);
 
-let rotatedArray = leftRotateByK(arr, K);
-console.log(`Array after Left Rotation by ${K} elements:`, rotatedArray);
+// let rotatedArray = leftRotateByK(arr, K);
+// console.log(`Array after Left Rotation by ${K} elements:`, rotatedArray);
+
+//1- Array Reverse Without Using Extra space
+
+
+// function reverseArrayInPlace(arr){
+//   let start =0;
+//   let end = arr.length -1 
+//   console.log(end)
+//   while(start<end){
+//     let temp = arr[start];
+//     arr[start] = arr[end]
+//     arr[end] = temp
+//     start++;
+//     end--
+//   }
+//  return arr
+// }
+
+// let arr = [1, 2, 3, 4, 5];
+// console.log("Original Array:", arr);
+
+// let reversedArray = reverseArrayInPlace(arr);
+// console.log("Reversed Array:", reversedArray);
+
+
+
+
 
 
 //Recursion Questions  ❓❓❓❓❓❓❓❓
