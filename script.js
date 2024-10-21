@@ -983,7 +983,6 @@
 
 // takeInputAndReverse(5);
 
-
 //59- Array left Rotation by 1
 
 // function leftRotateByOne(){
@@ -998,7 +997,6 @@
 
 // let rotatedArray = leftRotateByOne(arr);
 // console.log("Array after Left Rotation by 1:", rotatedArray);
-
 
 //59- Array right Rotation by 1
 
@@ -1015,16 +1013,15 @@
 // let rotatedArray = rightRotateByOne(arr);
 // console.log("Array after Left Rotation by 1:", rotatedArray);
 
-
 //60- Array left rotation by K element
 
 // function leftRotateByK(arr, K) {
 //   // K ko array ke length ke mod se adjust karenge (extra rotations remove karne ke liye)
 //   K = K % arr.length;
 
-//   let rotatedPart = arr.splice(0, K); 
+//   let rotatedPart = arr.splice(0, K);
 
-//   arr.push(...rotatedPart); 
+//   arr.push(...rotatedPart);
 
 //   return arr;
 // }
@@ -1038,10 +1035,9 @@
 
 //1- Array Reverse Without Using Extra space
 
-
 // function reverseArrayInPlace(arr){
 //   let start =0;
-//   let end = arr.length -1 
+//   let end = arr.length -1
 //   console.log(end)
 //   while(start<end){
 //     let temp = arr[start];
@@ -1059,10 +1055,103 @@
 // let reversedArray = reverseArrayInPlace(arr);
 // console.log("Reversed Array:", reversedArray);
 
+//62- Linear Search an array - If element found print the index else -1
+
+// function linearSearch(arr, target) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === target) {
+//       return i;
+//     } else {
+//       return -1;
+//     }
+//   }
+// }
+
+// let arr = [10, 25, 30, 47, 55];
+// let target = 100;
+
+//  console.log(linearSearch(arr, target))
+
+// 63- Binary Search. If element found print the index else -1
+// function binarySearch(arr, target) {
+//   let start = 0;
+//   let end = arr.length - 1;
+//   while (start <= end) {
+//     let mid = Math.floor((start + end) / 2);
+//     if (arr[mid] === target) {
+//       return mid;
+//     } else if (arr[mid] < target) {
+//       start = mid + 1;
+//     } else {
+//       end = mid - 1;
+//     }
+//   }
+//   return -1;
+// }
+
+// let arr = [10, 20, 30, 40, 50, 60];
+// let target = 40;
+
+// let index = binarySearch(arr, target);
+// if (index !== -1) {
+//   console.log(`Element found at index: ${index}`);
+// } else {
+//   console.log(`Element not found, returned: ${index}`);
+// }
+
+//64 Buble short
+
+// function bubbleSort(arr) {
+//   let n = arr.length;
+//   for (let i = 0; i < n - 1; i++) {
+//     for (let j = 0; j <= n - i - 1; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         let temp = arr[j];
+//         arr[j] = arr[j + 1];
+//         arr[j + 1] = temp;
+//       }
+//     }
+//   }
+//   return arr
+// }
+
+// let arr = [64, 34, 25, 12, 22, 11, 90];
+// console.log("Unsorted array:", arr);
+
+// let sortedArray = bubbleSort(arr);
+// console.log("Sorted array:", sortedArray);
 
 
+//65  Move all the negative elements on left side and positive elements on 
+// right side O(n).
+function rearrange(arr) {
+  left = 0;
+  right = arr.length - 1;
+  while (left <= right) {
+    if (arr[left] < 0) {
+      left++;
+    } else if (arr[right] >= 0) {
+      right--;
+    } else {
+      //modern way to swap two number using destructing without any third variable
+      // [arr[left], arr[right]] = [arr[right], arr[left]];
+      let temp = arr[left]; // Step 1: temp = 1
+      arr[left] = arr[right]; // Step 2: arr[0] = 4
+      arr[right] = temp; // Step 3: arr[3] = temp (1)
 
+      left++;
+      right--;
+    }
+  }
+  return arr;
+}
 
+let arr = [-12, 11, 13, -5, 6, -7, 5, 3, -6];
+console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
+
+//66- Print the count of subarrays whose sum is equal to the target.
+// Ex - {1,2,3,7,5}, T = 12    O/P - 2 - [ {2,3,7}, {7,5} ] - Both the subarrays 
+// has sum 12
 
 //Recursion Questions  ❓❓❓❓❓❓❓❓
 
