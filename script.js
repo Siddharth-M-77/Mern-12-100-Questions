@@ -1315,31 +1315,6 @@
 // let fact  = fabonacci(num)
 // console.log(fact)
 
-//OOPS & DESIGN 42 to 50✅✅✅✅✅
-//1.  Program to Store the data of 5 Students in a Student[] and print them✅✅
-
-// Step 1: Define the Student class
-// class Student {
-//   constructor(name, age, grade) {
-//     this.name = name;
-//     this.age = age;
-//     this.grade = grade;
-//   }
-//   // Method to display student details
-//   displayInfo() {
-//     console.log(`Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`);
-//   }
-// }
-// // Step 2: Create an array to store students
-// let students = [];
-
-// // Step 3: Add 5 students to the array
-// students.push(new Student("Sidd", 29, "A"));
-// students.push(new Student("Rohan", 29, "A"));
-// students.push(new Student("Akash", 29, "A"));
-// // Step 4: Print the details of each student
-// console.log("Student Details:");
-// students.forEach((student) => student.displayInfo());
 
 //STRING Day 33 to 37✅✅✅✅✅
 //71  Accept a string from user and print its each character on a new line
@@ -1562,15 +1537,15 @@
 //87. Check if the Sentence Is Pangram
 //Pangram=>. Pangram ka matlab hota hai ek aisi sentence jisme English alphabet ke sabhi 26 letters kam se kam ek baar use huye hoon.
 
-let sentence = "thequickbrwnfxjumpsvertheloazydg";
-function Pangram(sentence) {
-  let unique = new Set();
-  for (let char of sentence) {
-    unique.add(char);
-  }
-  return unique.size === 26;
-}
-console.log(Pangram(sentence));
+// let sentence = "thequickbrwnfxjumpsvertheloazydg";
+// function Pangram(sentence) {
+//   let unique = new Set();
+//   for (let char of sentence) {
+//     unique.add(char);
+//   }
+//   return unique.size === 26;
+// }
+// console.log(Pangram(sentence));
 
 //88 2351. First Letter to Appear Twice
 
@@ -1631,14 +1606,42 @@ console.log(Pangram(sentence));
 
 //  2418. Sort the People
 
-function sortPeople(names, heights) {
-  let combanied = names.map((name, index) => {
-    return { name: name, height: heights[index] };
-  });
-  combanied.sort((a,b)=>b.height - a.height)
+// function sortPeople(names, heights) {
+//   let combanied = names.map((name, index) => {
+//     return { name: name, height: heights[index] };
+//   });
+//   combanied.sort((a,b)=>b.height - a.height)
 
-  return combanied.map((person)=>person.name)
-}
-let names = ["Mary", "John", "Emma"];
-let heights = [180, 165, 170];
-console.log(sortPeople(names,heights))
+//   return combanied.map((person)=>person.name)
+// }
+// let names = ["Mary", "John", "Emma"];
+// let heights = [180, 165, 170];
+// console.log(sortPeople(names,heights))
+
+
+
+//OOPS & DESIGN 42 to 50✅✅✅✅✅
+//1.  Program to Store the data of 5 Students in a Student[] and print them✅✅
+
+// Step 1: Define the Student class
+// class Student {
+//   constructor(name, age, grade) {
+//     this.name = name;
+//     this.age = age;
+//     this.grade = grade;
+//   }
+//   // Method to display student details
+//   displayInfo() {
+//     console.log(`Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`);
+//   }
+// }
+// // Step 2: Create an array to store students
+// let students = [];
+
+// // Step 3: Add 5 students to the array
+// students.push(new Student("Sidd", 29, "A"));
+// students.push(new Student("Rohan", 29, "A"));
+// students.push(new Student("Akash", 29, "A"));
+// // Step 4: Print the details of each student
+// console.log("Student Details:");
+// students.forEach((student) => student.displayInfo());
