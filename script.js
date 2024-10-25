@@ -1121,37 +1121,152 @@
 // let sortedArray = bubbleSort(arr);
 // console.log("Sorted array:", sortedArray);
 
-
-//65  Move all the negative elements on left side and positive elements on 
+//65  Move all the negative elements on left side and positive elements on
 // right side O(n).
-function rearrange(arr) {
-  left = 0;
-  right = arr.length - 1;
-  while (left <= right) {
-    if (arr[left] < 0) {
-      left++;
-    } else if (arr[right] >= 0) {
-      right--;
-    } else {
-      //modern way to swap two number using destructing without any third variable
-      // [arr[left], arr[right]] = [arr[right], arr[left]];
-      let temp = arr[left]; // Step 1: temp = 1
-      arr[left] = arr[right]; // Step 2: arr[0] = 4
-      arr[right] = temp; // Step 3: arr[3] = temp (1)
+// function rearrange(arr) {
+//   left = 0;
+//   right = arr.length - 1;
+//   while (left <= right) {
+//     if (arr[left] < 0) {
+//       left++;
+//     } else if (arr[right] >= 0) {
+//       right--;
+//     } else {
+//       //modern way to swap two number using destructing without any third variable🚀
+//       [arr[left], arr[right]] = [arr[right], arr[left]];
 
-      left++;
-      right--;
-    }
-  }
-  return arr;
-}
+//       //old way to solve😔
+//       // let temp = arr[left]; // Step 1: temp = 1
+//       // arr[left] = arr[right]; // Step 2: arr[0] = 4
+//       // arr[right] = temp; // Step 3: arr[3] = temp (1)
 
-let arr = [-12, 11, 13, -5, 6, -7, 5, 3, -6];
-console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
+//       left++;
+//       right--;
+//     }
+//   }
+//   return arr;
+// }
+
+// let arr = [-12, 11, 13, -5, 6, -7, 5, 3, -6];
+// console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
 
 //66- Print the count of subarrays whose sum is equal to the target.
-// Ex - {1,2,3,7,5}, T = 12    O/P - 2 - [ {2,3,7}, {7,5} ] - Both the subarrays 
+// Ex - {1,2,3,7,5}, T = 12    O/P - 2 - [ {2,3,7}, {7,5} ] - Both the subarrays
 // has sum 12
+
+// let arr = [1, 2, 3, 7, 5];
+// let target = 12;
+
+// function subArray(arr, target) {
+//   let count = 0;
+//   let result = [];
+
+//   // Outer loop to set the starting point
+//   for (let i = 0; i < arr.length; i++) {
+//     let sum = 0;
+//     let tempArray = [];
+
+//     // Inner loop to find subarrays starting from i
+//     for (let j = i; j < arr.length; j++) {
+//       sum += arr[j];
+//       tempArray.push(arr[j]);
+
+//       // Check if the current subarray sum matches the target
+//       if (sum === target) {
+//         count++;
+//         result.push([...tempArray]);  // Push the current subarray to result
+//       }
+//     }
+//   }
+
+//   console.log(`Count of subarrays: ${count}`);
+//   console.log("Subarrays with sum equal to target:", result);
+//   return count;
+// }
+
+// subArray(arr, target);
+
+//67  Strong number using methods
+
+// function factorial(num){
+
+//   let fact = 1;
+//   for(let i = 1;i<=num;i++){
+//     fact *=i
+//   }
+//   return fact;
+// }
+// console.log(factorial(5))
+
+// function isStrongNumber(num){
+//   let sum  = 0;
+//   let temp = num;
+//   //calculate the sum of the each number
+
+//   while(temp>0)
+//     {
+//       let digit = temp%10;
+//       sum+=factorial(digit)
+//       temp = Math.floor(temp/10)
+//     }
+//     return sum===num
+
+//   }
+//   console.log(isStrongNumber(145))
+
+//68 Special number using method
+
+//1st we have to make a function that calculate factorial of given number after that we have to cheak given number is Strong or Not
+// let num = 146;
+// function factorial(n){
+//   let fact = 1;
+//   for(let i = 1; i<=n; i++){
+//     fact *=i
+//   }
+//   return fact;
+// }
+
+// function isSpecialNumner(num) {
+//   let temp = num;
+//   let sum = 0;
+
+//   while (temp > 0) {
+//     let digit = temp % 10;
+//     sum += factorial(digit);
+//     temp = Math.floor(temp / 10);
+//   }
+//   return sum === num;
+// }
+// console.log(isSpecialNumner(num));
+
+//69- Leetcode 1929 - Concatenation of array
+
+//1st way to solve this questions🌷🌷
+// let nums = [1, 2, 3, 4, 5];
+// function Concatenation(arr) {
+//   let n = arr.length;
+//   let ans = new Array(2 * n);//creating a new blank array with size of double
+//   for (let i = 0; i < n; i++) {
+//     ans[i] = nums[i];
+//     ans[i + n] = nums[i];
+//   }
+//   return ans;
+// }
+
+//2nd way to solve this questions ✅✅
+// function Concatenation(arr) {
+//   return [...arr, ...arr];
+// }
+
+// console.log(Concatenation(nums));
+
+//70 - Leetcode 1920 - Build Array from Permutation
+// function buildArray(nums) {
+//   return nums.map((num) => nums[num]);
+// }
+
+// let nums = [0, 2, 1, 5, 3, 4];
+// console.log(buildArray(nums));
 
 //Recursion Questions  ❓❓❓❓❓❓❓❓
 
@@ -1227,7 +1342,7 @@ console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
 // students.forEach((student) => student.displayInfo());
 
 //STRING Day 33 to 37✅✅✅✅✅
-//1  Accept a string from user and print its each character on a new line
+//71  Accept a string from user and print its each character on a new line
 // let str = "Sidd";
 
 // using forEach loop 1.
@@ -1244,13 +1359,13 @@ console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
 //     console.log(char);
 // }
 
-//2. Accept a string and print it in reverse order
+//72. Accept a string and print it in reverse order
 
 // let str = "Hello";
 // let reversed = str.split("").reverse().join('')
 // console.log(reversed)
 
-// 3 Check if the string is Pallindromic or not
+// 73 Check if the string is Pallindromic or not
 
 // let str = "olo";
 // function palidrome(str) {
@@ -1263,7 +1378,7 @@ console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
 // }
 // palidrome(str)
 
-//4 . Pallindromic String using method and Two pointer algorithm (hint:
+//74 . Pallindromic String using method and Two pointer algorithm (hint:
 //     Array reverse algo)
 
 // function isPalindrome(str) {
@@ -1281,7 +1396,7 @@ console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
 // let str = "madam";
 // console.log(isPalindrome(str));
 
-// 5 .  Count vowels and consonents in a string
+// 75 .  Count vowels and consonents in a string
 
 // function countVowelsAndConsonents(str) {
 //   let vowels = ["a", "e", "i", "o", "u"];
@@ -1300,7 +1415,7 @@ console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
 // }
 // console.log(countVowelsAndConsonents("Siddharth"));
 
-//6.  Toggle each alphabet of String
+//76.  Toggle each alphabet of String
 // In - AcgDfD Output - aCGdFd
 
 // function toggleCase(str){
@@ -1318,7 +1433,7 @@ console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
 // let str = 'hElop';
 // console.log(toggleCase(str))
 
-//7.  Take an array of strings words and a String Prefix. Print the number of
+//77.  Take an array of strings words and a String Prefix. Print the number of
 // strings in words that contain pref as a prefix.
 
 // const words = ["apple", "banana", "apricot", "grape", "apartment"];
@@ -1329,7 +1444,7 @@ console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
 // let prefixLength = countPrefix(words, pre);
 // console.log(prefixLength);
 
-//8. Accept a space seperated sentence and split in into words. Print each
+//78. Accept a space seperated sentence and split in into words. Print each
 // word on a new line with first letter capitalized.
 
 // let sentence = "hello bhai kaisa hai tu kal aa party deta hu";
@@ -1338,7 +1453,7 @@ console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
 //   .map((elem) => elem.charAt(0).toUpperCase() + elem.slice(1)).join(" ");
 // console.log(ans);
 
-//-9. Extend the prev question and capitalize first & last character of each
+//-79. Extend the prev question and capitalize first & last character of each
 // word in the sentence and print the new sentence
 //   Ex - Hello bhai Kaise ho a
 // HellO BhaI KaisE HO A
@@ -1349,38 +1464,39 @@ console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
 //     .map(
 //         (elem) =>
 //         elem.charAt(0).toUpperCase() +
-//         elem.slice(1, elem.length-1)+elem.charAt(elem.length-1).toUpperCase()
+//         elem.slice(1,-1)+elem.slice(elem.length -1).toUpperCase()
 //     )
 //     .join(" ");
 // console.log(ans);
 
-//10. 2114. Maximum Number of Words Found in Sentence
+//80. 2114. Maximum Number of Words Found in Sentence
 // let num = "1234"; //if u give string then no need to convert it to string otherwise u give number then convert it into string
 // let maxNum = Math.max(...num.split("").map(Number)); //.map(Number) convert each elemnt in Number
 // console.log(maxNum);
 
-//11.Accept a string and print the frequency of each character present in the string
+//81.Accept a string and print the frequency of each character present in the string
 
 // function printCharFrequency(str) {
 //   let frequency = {};
-//   for (let char of str) {
-//     if (char !== " ") {
-//       if (frequency[char]) {
-//         frequency[char]++;
-//       } else {
-//         frequency[char] = 1;
+//   for(let char of str){
+//     if(char!==" "){
+//       if(frequency[char]){
+//         frequency[char]++
+//       }
+//       else{
+//         frequency[char] =1
 //       }
 //     }
 //   }
-//   for (let char in frequency) {
-//     console.log(`Character ${char} occurs ${frequency[char]} times`);
+//   for(let char in frequency){
+//     console.log(`frequency ${char} is ${frequency[char]} times`)
 //   }
 // }
 
 // let str = "hello bhai kaisa hai";
 // printCharFrequency(str);
 
-//12. Check Two Strings are Anagram or Not
+//82. Check Two Strings are Anagram or Not
 // Anagrams words have the same word length & same character count
 // Examples of anagram words are arc and car, state and taste, night
 // and thing etc.
@@ -1401,19 +1517,19 @@ console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
 //   console.log(`${str1} and ${str2} are not anagrams.`);
 // }
 
-//sort the words of an sentence
+//83 sort the words of an sentence
 // let sentence = "hello bhai kaisa hai tu kal aa party deta hu";
 // let sorted = sentence.split(" ").sort().join(" ")
 // console.log(sorted)
 
 // Hasing day 40 ✅✅✅✅✅✅
 
-//1. - Print the unique elements in an array
+//84. - Print the unique elements in an array
 // let array = [1, 2, 3, 4, 2, 3, 5, 1, 6];
 // let unique = [...new Set(array)];
 // console.log(unique);
 
-//2.  Find the freqency of elements in an integer array
+//85.  Find the freqency of elements in an integer array
 
 // let intArr = [1, 2, 3, 4, 5, 6, 7, 8,6,5,4,32,1,];
 // function freqencyOfNumber(intArr) {
@@ -1431,7 +1547,7 @@ console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
 // }
 // freqencyOfNumber(intArr)
 
-// function numJewelsInStones(J, S) {
+//86 function numJewelsInStones(J, S) {
 //   let jweller = new Set(J);
 //   let count = 0;
 //   for (let stone of S) {
@@ -1443,15 +1559,61 @@ console.log(rearrange(arr)); // Output: [-12, -6, -13, -5, -7, -3, 5, 6, 11]
 // let S = "aAAbbbb"; // Stones
 // console.log(numJewelsInStones(J, S));
 
-//. Check if the Sentence Is Pangram
+//87. Check if the Sentence Is Pangram
 //Pangram=>. Pangram ka matlab hota hai ek aisi sentence jisme English alphabet ke sabhi 26 letters kam se kam ek baar use huye hoon.
 
-// let sentence = "thequickbrwnfxjumpsvertheloazydg";
-// function Pangram(sentence) {
-//   let unique = new Set();
-//   for (let char of sentence) {
-//     unique.add(char);
+let sentence = "thequickbrwnfxjumpsvertheloazydg";
+function Pangram(sentence) {
+  let unique = new Set();
+  for (let char of sentence) {
+    unique.add(char);
+  }
+  return unique.size === 26;
+}
+console.log(Pangram(sentence));
+
+//88 2351. First Letter to Appear Twice
+
+// function firstRepeatedCharacter(s) {
+//   let seen = new Set();
+//   for (let char of s) {
+//     if (seen.has(char)) {
+//       return char;
+//     } else {
+//       seen.add(char);
+//     }
 //   }
-//   return unique.size === 26;
 // }
-// console.log(Pangram(sentence));
+
+// let s = "abccbaacz";
+// console.log(firstRepeatedCharacter(s));
+
+// : Exactly 2 baar appear hone wale characters ko count kro with that char
+
+let s = "abccbaaczcc";
+
+function countCharsAppearingTwice(s) {
+  const charCount = {}; 
+
+  // Step 1: Har character ka frequency count kare
+  for (const char of s) {
+    charCount[char] ??= 0; // agar character pehle se nahi hai toh 0 set karega
+    //??= ek nullish coalescing assignment operator hai jo sirf tabhi assign karega jab charCount[char] undefined ho
+    charCount[char]++; 
+  }
+
+  /
+  let twiceChars = []; 
+  for (const char in charCount) {
+    if (charCount[char] === 2) {
+      twiceChars.push(char); // character ko twiceChars array me add karte hain
+    }
+  }
+
+  return {
+    count: twiceChars.length,
+    characters: twiceChars,
+  };
+}
+
+console.log(countCharsAppearingTwice(s));
