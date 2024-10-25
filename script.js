@@ -1268,52 +1268,7 @@
 // let nums = [0, 2, 1, 5, 3, 4];
 // console.log(buildArray(nums));
 
-//Recursion Questions  ❓❓❓❓❓❓❓❓
 
-// Accept a decimal number and convert it into binary equivalent. ✅✅✅
-// function decimalToBinary(decimal) {
-//   if (decimal === 0) return "";
-//   return decimalToBinary(Math.floor(decimal / 2)) + (decimal % 2).toString();
-// }
-// let number = 77;
-// let binaryEquivalent = decimalToBinary(number);
-// console.log(binaryEquivalent || "0");
-
-// Accept a binary number in String form and convert it into decimal ✅✅✅
-
-// function binaryToDecimal(binaryStr) {
-//   let decimal = 0;
-//   for (let i = 0; i < binaryStr.length; i++) {
-//     let bit = parseInt(binaryStr[i]);
-//     decimal = decimal * 2 + bit;
-//   }
-//   return decimal;
-// }
-// let binaryNumber = "1010100";
-// let decimalEquivalent = binaryToDecimal(binaryNumber);
-// console.log(decimalEquivalent || "0");
-
-//Factorial of a number using recursion ✅✅✅
-
-// function factorial(n) {
-//   if (n === 0 || n === 1) return 1;
-//   return n * factorial(n - 1);
-// }
-// let n = 5;
-// let Fact = factorial(n);
-// console.log(Fact)
-
-// Fibonacci number using recursion ✅✅✅
-
-// function fabonacci(n){
-//     if(n===0 ) return 0;
-//     if(n===1) return 1;
-
-//     return fabonacci(n-1) + fabonacci(n-2)
-// }
-// let num = 10
-// let fact  = fabonacci(num)
-// console.log(fact)
 
 
 //STRING Day 33 to 37✅✅✅✅✅
@@ -1645,3 +1600,52 @@
 // // Step 4: Print the details of each student
 // console.log("Student Details:");
 // students.forEach((student) => student.displayInfo());
+
+
+
+//Recursion Questions  ❓❓❓❓❓❓❓❓
+
+// Accept a decimal number and convert it into binary equivalent. ✅✅✅
+// function decimalToBinary(decimal) {
+//   if (decimal === 0) return "";
+//   return decimalToBinary(Math.floor(decimal / 2)) + (decimal % 2).toString();
+// }
+// let number = 77;
+// let binaryEquivalent = decimalToBinary(number);
+// console.log(binaryEquivalent || "0");
+
+// Accept a binary number in String form and convert it into decimal ✅✅✅
+
+// function binaryToDecimal(binaryStr) {
+//   let decimal = 0;
+//   for (let i = 0; i < binaryStr.length; i++) {
+//     let bit = parseInt(binaryStr[i]);
+//     decimal = decimal * 2 + bit;
+//   }
+//   return decimal;
+// }
+// let binaryNumber = "1010100";
+// let decimalEquivalent = binaryToDecimal(binaryNumber);
+// console.log(decimalEquivalent || "0");
+
+//Factorial of a number using recursion ✅✅✅
+
+// function factorial(n) {
+//   if (n === 0 || n === 1) return 1;
+//   return n * factorial(n - 1);
+// }
+// let n = 5;
+// let Fact = factorial(n);
+// console.log(Fact)
+
+// Fibonacci number using recursion ✅✅✅
+
+// function fabonacci(n){
+//     if(n===0 ) return 0;
+//     if(n===1) return 1;
+
+//     return fabonacci(n-1) + fabonacci(n-2)
+// }
+// let num = 10
+// let fact  = fabonacci(num)
+// console.log(fact)
