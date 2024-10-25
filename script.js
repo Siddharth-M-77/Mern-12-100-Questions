@@ -1590,30 +1590,55 @@ console.log(Pangram(sentence));
 
 // : Exactly 2 baar appear hone wale characters ko count kro with that char
 
-let s = "abccbaaczcc";
+// let s = "abccbaaczcc";
 
-function countCharsAppearingTwice(s) {
-  const charCount = {}; 
+// function countCharsAppearingTwice(s) {
+//   const charCount = {};
 
-  // Step 1: Har character ka frequency count kare
-  for (const char of s) {
-    charCount[char] ??= 0; // agar character pehle se nahi hai toh 0 set karega
-    //??= ek nullish coalescing assignment operator hai jo sirf tabhi assign karega jab charCount[char] undefined ho
-    charCount[char]++; 
-  }
+//   // Step 1: Har character ka frequency count kare
+//   for (const char of s) {
+//     charCount[char] ??= 0; // agar character pehle se nahi hai toh 0 set karega
+//     //??= ek nullish coalescing assignment operator hai jo sirf tabhi assign karega jab charCount[char] undefined ho
+//     charCount[char]++;
+//   }
 
-  /
-  let twiceChars = []; 
-  for (const char in charCount) {
-    if (charCount[char] === 2) {
-      twiceChars.push(char); // character ko twiceChars array me add karte hain
-    }
-  }
+//   /
+//   let twiceChars = [];
+//   for (const char in charCount) {
+//     if (charCount[char] === 2) {
+//       twiceChars.push(char); // character ko twiceChars array me add karte hain
+//     }
+//   }
 
-  return {
-    count: twiceChars.length,
-    characters: twiceChars,
-  };
+//   return {
+//     count: twiceChars.length,
+//     characters: twiceChars,
+//   };
+// }
+
+// console.log(countCharsAppearingTwice(s));
+
+//89 1748. Sum of Unique Elements
+
+// let arr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5];
+
+// function sumOfUniqueElement(arr) {
+//   let unique = [...new Set(arr)];
+//   let sum = 0;
+//   return unique.map(Number).reduce((sum, num) => sum + num);
+// }
+// console.log(sumOfUniqueElement(arr));
+
+//  2418. Sort the People
+
+function sortPeople(names, heights) {
+  let combanied = names.map((name, index) => {
+    return { name: name, height: heights[index] };
+  });
+  combanied.sort((a,b)=>b.height - a.height)
+
+  return combanied.map((person)=>person.name)
 }
-
-console.log(countCharsAppearingTwice(s));
+let names = ["Mary", "John", "Emma"];
+let heights = [180, 165, 170];
+console.log(sortPeople(names,heights))
