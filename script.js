@@ -1605,7 +1605,7 @@
 
 //Recursion Questions  ❓❓❓❓❓❓❓❓
 
-// Accept a decimal number and convert it into binary equivalent. ✅✅✅
+// Q-97 =>Accept a decimal number and convert it into binary equivalent. ✅✅✅
 // function decimalToBinary(decimal) {
 //   if (decimal === 0) return "";
 //   return decimalToBinary(Math.floor(decimal / 2)) + (decimal % 2).toString();
@@ -1614,7 +1614,7 @@
 // let binaryEquivalent = decimalToBinary(number);
 // console.log(binaryEquivalent || "0");
 
-// Accept a binary number in String form and convert it into decimal ✅✅✅
+//Q- 98 => Accept a binary number in String form and convert it into decimal ✅✅✅
 
 // function binaryToDecimal(binaryStr) {
 //   let decimal = 0;
@@ -1628,7 +1628,7 @@
 // let decimalEquivalent = binaryToDecimal(binaryNumber);
 // console.log(decimalEquivalent || "0");
 
-//Factorial of a number using recursion ✅✅✅
+//Q -99=> Factorial of a number using recursion ✅✅✅
 
 // function factorial(n) {
 //   if (n === 0 || n === 1) return 1;
@@ -1638,7 +1638,7 @@
 // let Fact = factorial(n);
 // console.log(Fact)
 
-// Fibonacci number using recursion ✅✅✅
+//Q-100=> Fibonacci number using recursion ✅✅✅
 
 // function fabonacci(n){
 //     if(n===0 ) return 0;
